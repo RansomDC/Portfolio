@@ -316,7 +316,7 @@ SLIDESHOW
     to {opacity: 1;}
 }
 
-p a {
+.Slide-text p a {
     text-decoration: underline;
     color: white;
     cursor: pointer;
