@@ -5,7 +5,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width" />
         <title>Ransom Cadorette</title>
-        <link rel="stylesheet" type="text/css" href="./style.css">
+        <link rel="stylesheet" type="text/css" href="./CSS/style.css">
+        <script src="./JS/script.js" defer></script>
     </head>
 
     <!--Body-->
@@ -43,27 +44,70 @@
                     <br>
                     <br> Hello! My name is Ransom Cadorette, and this is my portfolio website. Feel free to check out some of my projects and experience.
                     <br>
+                    <br> Scoll down to see more!
+                    <br>
                     <br> Thank you for stopping by and enjoy! 
                 </p>
             </strong>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="./img/Face.jpg">  <!--672x875-->
+                    <div class="Caption Text"></div>
+                </div>
+                <div class="mySlides fade slide">
+                    <div class="Slide-text">
+                        My current coding experience is that of a full-stack developer and the following languages have been incorporated into my training:
+                        <div class="slide-image-container">
+                            <img class="slide-image" src="./img/HTML_CSS_and_JavaScript.jpeg">
+                            <img class="slide-image" src="./img/Csharp.png">
+                            <img class="slide-image" src="./img/Python.png">
+                            <img class="slide-image" src="./img/SQL_and_Database.jpg">
+                            <img class="slide-image" src="./img/NET.jpg">
+                        </div>
+                    </div>
+                    <div class="Caption Text"></div>
+                </div>
+                <div class="mySlides fade slide">
+                    <div class="Slide-text">
+                        <p>
+                            I'm excited to connect with people and businesses. 
+                            <br> If you think you think we might work well together, feel free to send me a message by clicking <a onclick="openForm()">here</a>!
+                        </p>
+                    </div>
+                    <div class="Caption Text"></div>
+                </div>
+
+                <!--Next and Prev buttons-->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <!--The selection dots-->
+            <div style="text-align: center;">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
         </div>
 
         <!--About section-->
         <div class="Row" id="About">
             <!--Left column-->
             <div class="Column_2">
-                <img src="./img/Husband-and-Wife.jpg" alt="Replace with your own image and description">
+                <img class="content-image" src="./img/Husband-and-Wife.jpg" alt="Replace with your own image and description">
             </div>
             <!--Right column-->
             <div class="Column_1">
                 <h2>About</h2>
                 <p>
-                    A great deal of my working experience has come from working with marine mammals, birds, fish and invertebrates. That is how I met my wife, and we still bond over our love of wildlife to this day.
+                    A great deal of my working experience has come from working with marine mammals, birds, fish and invertebrates. That is how I met my wife, and we still bond over our love of wildlife to this day. Having a degree in ecology
+                    led me to want to lead the charge to have people work with, and protect the environment. The best way I knew to do this was to help inspire people through my work and the Seatte, and Oregon Coast Aquariums.
+                    <br>
                     But working in aquariums takes a heavy physical tole, and after almost 8 years I knew that if I continued, I wouldn't be able to pick up my future children. So I decided that I needed a little change. 
                     <br>
-                    <br> So I am currently a student of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, and am learning HTML, CSS, JavaScript, SQL, C# and more. 
+                    <br>I am currently a student of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp. But my goal is that
+                    whatever job I take will allow me to continue to maintain a healthy planet where people and the environment both thrive!
+
                     <br>
-                    <br>The plan is to be a full-stack developer, so feel free to get in <a href="#Contact">Contact</a> if you think that we might work well together!
                 </p>
             </div>
         </div>
@@ -84,27 +128,55 @@
             </div>
         </div>
 
-        <!--Contact section-->
+        <!--NEW FORM-->
+
+        <button class="open-button" onclick="openForm()">Let's connect!</button>
+
+        <div class="form-popup" id="myForm">
+            <form onsubmit="validateForm()" name="contactForm" class="form-container">
+              <h1>Contact</h1>
+          
+              <label for="Name"><b>Name</b></label>
+              <input type="text" placeholder="Name" name="Name" required>
+          
+              <label for="Email"><b>Email</b></label>
+              <input type="text" placeholder="Email" name="Email" required>
+
+              <label for="Message"><b>Message</b></label>
+              <input type="text" placeholder="Message" name="Message" required>
+          
+              <button type="submit" class="btn">Connect!</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+          </div>
+
+        <!--END NEW FORM-->
+
+        <!--OLD FORM
+
+        <!--Contact section->
         <div class="Row" id="Contact">
-            <!--Contact image, left column-->
+            <!--Contact image, left column->
             <div class="Column_2 Column_tall">
-                <img src="./img/husband-and-wife-3.jpeg" alt="Contact_Image">
+                <img  class="content-image" src="./img/husband-and-wife-3.jpeg" alt="Contact_Image">
             </div>
-            <!--Contact form, right column-->
+            <!--Contact form, right column->
             <div class="Column_1 Column_tall">
                 <h2>Contact</h2>
-                <!--This specifies where and how to send the form data; we are leaving it blank-->
-                <form action="" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
+                <!--This specifies where and how to send the form data; we are leaving it blank->
+                <form id="Contact-Form" onsubmit="validateForm()" name="contactForm"  method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute ->
                     <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
+                        <input type="text" id="Name" name="Name" value="" placeholder="Please enter your name here">
                     <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                        <input type="text" id="Email" name="Email" value="" placeholder="Please enter your email here">
                     <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="SUBMIT">
+                        <input type="text" id="Message" name="Message" value="" placeholder="Please write your message here">
+                        <input type="submit" value="Submit">
                 </form>
             </div>
         </div>
+
+        END OLD FORM -->
 
         <!--Footer section-->
         <footer>

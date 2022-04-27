@@ -1,4 +1,8 @@
 /***** GENERAL STYLING *****/
+html {
+    scroll-behavior: smooth;
+}
+
 /* Body */
 body {
     margin: 0%  /* This ensures our site displays all the way to the edge of the browser screen */
@@ -187,11 +191,143 @@ footer {
     background: rgba(0, 0, 0, 0.5); /* This provides a semi-transparent background for the text to sit over */
     color: white; /* Makes the font color white */
     width: 100%; /* Ensures the video-text container fills the width of the video */
+    height: 100vh;
     padding: 20px; /* This adds padding around the video-text container so that the background goes slightly beyond the text */
     position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
     -webkit-animation: moveVideoText 5.75s;
     animation: moveVideoText 5.75s;
 }
+
+/*========
+SLIDESHOW
+----------*/
+.slideshow-container {
+    box-sizing: border-box;
+    position: relative;
+    margin: auto;
+    margin-top: 80px;
+    width: 30vw;
+}
+
+.mySlides {
+    display: none;
+}
+
+.Slide-text {
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', Optima, sans-serif;
+}
+
+.slide-three {
+    font-size: 24pt;
+    height: 200%;
+}
+
+.Slide-text p {
+    height: 100px;
+    text-align: center;
+}
+
+.slide-image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.slide-image-container div {
+    background-color: white;
+}
+
+.slide-image {
+    height: 25%;
+    width: 25%;
+    flex-basis: 5%;
+    flex-shrink: 1;
+    margin: 5px;
+}
+
+.slide {
+    height: 100%;
+    width: auto;
+    background-color: #2a3b72;
+}
+
+/*Next and previoius buttons*/
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/*Position next button to the right*/
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/*On hover, add a black background next and prev buttons*/
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Caption.Text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 20px 2px 0px 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/*Fading animation*/
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: 0.4;}
+    to {opacity: 1;}
+}
+
+p a {
+    text-decoration: underline;
+    color: white;
+    cursor: pointer;
+}
+
+/*===================
+   END OF SLIDESHOW
+---------------------*/
+
+
+
 
 /* This animation effect causes the overlay video text to move up from the bottom of the page upon page load */
 @keyframes moveVideoText {
@@ -294,3 +430,77 @@ form {
     font-family: "Trebuchet MS", Optima;
 }
 /***** END OF CONTACT FORM STYLING *****/
+
+
+
+/*=====================
+    FORM POPUP MARKUP
+-----------------------*/
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+    background-color:#1685ec;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+  }
+  
+  /* The popup form - hidden by default */
+  .form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  /* Full-width input fields */
+  .form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* When the inputs get focus, do something */
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    background-color:#2a3b72;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: rgb(161, 78, 0);
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
