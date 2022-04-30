@@ -88,7 +88,7 @@ img {
 
 /* Image element hover effects */
 img:hover {
-	filter: grayscale(5%);  /* Brings back most of the image's color when hovered over */
+	/*filter: grayscale(5%);  /* Brings back most of the image's color when hovered over */
     transition: transform 1s; /*, filter 1s; /* Transition lasts 1 second */
 	transform: scale(1.1); /* Image is increased slightly when hovered over */
 }
