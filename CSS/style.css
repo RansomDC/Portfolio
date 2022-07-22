@@ -48,21 +48,9 @@ p {
     padding-right: 20px; /* Adds padding to the right of the paragraph element */
 }
 
-/* Paragraph element hover effect */
-p:hover {
-    transition: transform 1s; /* This makes the transform effect last 1 second */
-	transform: scale(1.01); /* This makes the paragraphs increase slightly in size when hovered over */
-}
-
 /* Center class - this applies to all elements with the class "center" */
 .center, .introText {
     text-align: center; /* This center aligns the text */
-}
-
-/* Center class hover effect - This only affects the quote, github link, and footer */
-.center:hover {
-    transition: transform 2s; /* This makes the transform effect last 2 seconds */
-    transform: scale(1.1); /* This makes the elements with class "center" increase in size by 1.1 when hovered over */
 }
 
 /* Anchor elements */
