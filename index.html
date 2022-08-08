@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <!--Head-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>David Cadorette</title>
+        <link rel="stylesheet" type="text/css" href="./CSS/style.css">
+        <script src="./JS/script.js" defer></script>
+    </head>
+
+    <!--Body-->
+    <body class="Background">
+        
+        <!--Navbar-->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">Links</a>
+            <a href="#Contact" onclick="openForm()">Contact</a>
+        </div>
+
+        <!--Breaks inserted to add space between navbar and the first heading-->
+        <br>
+        <br>
+
+        <!--Background video-->
+        <div id="Home">
+            <video autoplay muted loop id="Waves_Video">
+                <source src="./img/video/waves.mp4" type="video/mp4">
+                <!--Display message if video fails to run-->
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+
+        <!--Video text-->
+        <div class="Video_Text">
+            <h1 class="white-text">David Cadorette</h1>
+            <strong>
+                <p class="introText">
+                    <q>Never forget, The person you truly are, is the one you choose to be when nobody else is watching.
+                    </q>
+                    <br>
+                    <br>
+                    <br> Hello! My name is David Cadorette, and this is my portfolio website. Feel free to check out some of my projects and experience.
+                    <br>
+                    <br> Scoll down to see more!
+                    <br>
+                    <br> Thank you for stopping by and enjoy! 
+                </p>
+            </strong>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="./img/Face.jpg">  <!--672x875-->
+                    <div class="Caption Text"></div>
+                </div>
+                <div class="mySlides fade slide">
+                    <div class="Slide-text">
+                        My current coding experience is that of a full-stack developer and the following languages have been incorporated into my training:
+                        <div class="slide-image-container">
+                            <img class="slide-image" src="./img/HTML_CSS_and_JavaScript.jpeg">
+                            <img class="slide-image" src="./img/Csharp.png">
+                            <img class="slide-image" src="./img/Python.png">
+                            <img class="slide-image" src="./img/SQL_and_Database.jpg">
+                            <img class="slide-image" src="./img/NET.jpg">
+                            <img class="slide-image" src="./img/Bootstrap.png">
+                        </div>
+                    </div>
+                    <div class="Caption Text"></div>
+                </div>
+                <div class="mySlides fade slide">
+                    <div class="Slide-text">
+                        <p>
+                            I'm excited to connect with people and businesses. 
+                            <br> If you think you think we might work well together, feel free to send me a message by clicking <a onclick="openForm()">here</a>!
+                        </p>
+                    </div>
+                    <div class="Caption Text"></div>
+                </div>
+
+                <!--Next and Prev buttons-->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <!--The selection dots-->
+            <div style="text-align: center;">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+
+        <!--About section-->
+        <div class="Row" id="About">
+            <!--Left column-->
+            <div class="Column_2">
+                <img class="content-image" src="./img/Husband-and-Wife.jpg" alt="Replace with your own image and description">
+            </div>
+            <!--Right column-->
+            <div class="Column_1">
+                <h2>About</h2>
+                <p>
+                    A great deal of my working experience has come from working with marine mammals, birds, fish and invertebrates. That is how I met my wife, and we still bond over our love of wildlife to this day. 
+                    <br>
+                    But working in aquariums takes a heavy physical toll, and after almost 8 years I knew that if I continued, I wouldn't be able to pick up my future children. So I decided that I needed a change. 
+                    <br>
+                    <br>I am a recent graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp. I have finished my courses in HTML, CSS, JavaScript, Python, SQL, Django, C#, .NET and several other frameworks. 
+                    I am excited to move forward with my career, and to use the skills that I've gained in this process!
+
+                    <br>
+                </p>
+            </div>
+        </div>
+
+        <!--GitHub section-->
+        <div class="Row" id="GitHub">
+            <!--Left column-->
+            <div class="Column_1">
+                <h2>Links</h2>
+                <p class="center">
+                    You can view my coding projects on my GitHub profile here:
+                    <a href="https://github.com/RansomDC" target="_blank">David's GitHub</a>
+                    <br>
+                    <br>
+                    Have a look at some of my most interesting projects: <br>
+                    <a href="https://github.com/RansomDC/Live_project_code_summary-Python">Python Live Project</a><br><br>
+                    <a href="https://github.com/RansomDC/Live_Project_Code_Summary-CS">C# ASP.NET core Live Project</a><br><br>
+                    <a href="https://ransomdc.github.io/RoR-randomizer/">Risk of Rain Item Randomizer</a><br><br>
+                    Check out more of my work experience at my LinkedIn here: <a href="https://www.linkedin.com/in/david-cadorette/">David's LinkedIn</a> <br><br>
+                    Or have a look at my résumé directly <a href="https://docs.google.com/document/d/17jvByCGWOt6qxt3RyfwRSSKDJ-40z5x7U2oW2K1WBxE/edit?usp=sharing">here.</a>
+                </p>
+            </div>
+            <!--Right column-->
+            <div class="Column_2">
+                <a href="https://github.com/RansomDC" target="_blank"><img src="./img/github-logo.png" alt="GitHub Logo"></a>
+            </div>
+        </div>
+
+        <!--NEW FORM-->
+
+        <button class="open-button" onclick="openForm()">Let's connect!</button>
+
+        <div class="form-popup" id="myForm">
+            <form onsubmit="validateForm()" name="contactForm" class="form-container">
+              <h1>Contact</h1>
+          
+              <label for="Name"><b>Name</b></label>
+              <input type="text" placeholder="Name" name="Name" required>
+          
+              <label for="Email"><b>Email</b></label>
+              <input type="text" placeholder="Email" name="Email" required>
+
+              <label for="Message"><b>Message</b></label>
+              <input type="text" placeholder="Message" name="Message" required>
+          
+              <button type="submit" class="btn">Connect!</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+          </div>
+
+        <!--END NEW FORM-->
+
+        <!--OLD FORM
+
+        <!--Contact section->
+        <div class="Row" id="Contact">
+            <!--Contact image, left column->
+            <div class="Column_2 Column_tall">
+                <img  class="content-image" src="./img/husband-and-wife-3.jpeg" alt="Contact_Image">
+            </div>
+            <!--Contact form, right column->
+            <div class="Column_1 Column_tall">
+                <h2>Contact</h2>
+                <!--This specifies where and how to send the form data; we are leaving it blank->
+                <form id="Contact-Form" onsubmit="validateForm()" name="contactForm"  method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute ->
+                    <label>Name:</label>
+                        <input type="text" id="Name" name="Name" value="" placeholder="Please enter your name here">
+                    <label>Email:</label>
+                        <input type="text" id="Email" name="Email" value="" placeholder="Please enter your email here">
+                    <label>Message:</label>
+                        <input type="text" id="Message" name="Message" value="" placeholder="Please write your message here">
+                        <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+
+        END OLD FORM -->
+
+        <!--Footer section-->
+        <footer>
+            <p>
+                <p class="center">David Cadorette 2022</p>
+                <br>
+            </p>
+        </footer>
+    </body>
+</html>
