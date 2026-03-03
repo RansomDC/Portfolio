@@ -143,8 +143,8 @@
 
         <button class="open-button" onclick="openForm()">Let's connect!</button>
 
-        <div class="form-popup" id="myForm">
-            <form onsubmit="validateForm()" name="contactForm" class="form-container">
+        <div class="form-popup">
+            <form id="myForm" method="POST" onsubmit="validateForm()" name="contactForm" class="form-container">
               <h1>Contact</h1>
           
               <label for="Name"><b>Name</b></label>
